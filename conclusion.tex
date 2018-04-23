@@ -1,0 +1,22 @@
+\chapter{Conclusion}
+%\addcontentsline{toc}{chapter}{Conclusion}
+\thispagestyle{plainbottom}
+Your Conclusions here.
+During our research, the main problem that was trying to be solved was early intervention of developmental disorders. Researchers in the past have shown that machine learning is useful to diagnose children with various disorders. So, by applying different machine learning techniques, different models were built to diagnose different developmental disorders. Also, models were built to understand the co-occurrences of these disorders. Apart for this our research also focused on analyzing the importance of each reviews to the diagnose and more specifically features which are an indicators of these developmental disorders.
+
+Among the various supervised learning techniques, most of the times Random Forest models performed exceptionally well with our data. On the other hand, for feature selection, RFE was able to select the important features from our feature set. The important findings from our analysis are as follows:
+
+\begin{itemize}
+\item Most of our models predict the diagnosis labels in the subgroup data for male children with a better accuracy of 7\% when compared to female children. 
+\item IQ features predict subgroup data diagnosis with 66.32\%, diagnose ASD with 87.8\%, diagnose ADHD with 83.19\% and diagnose VCFS with 88\% accuracy. Overall, IQ cannot be used to diagnose the subgroup data, but it could help with diagnosing ASD, ADHD and VCFS separately. 
+\item BASC features predict subgroup data with 75\%, diagnose ASD with 90\%, diagnose ADHD with 83\% and diagnose VCFS with 95\% accuracy. These tests have a low prediction rate when compared to other tests for predicting the diagnosis of the subgroup data. 
+\item VINE features predict subgroup data with 69\%, diagnose ASD with 88\%, diagnose ADHD with 82\% and diagnose VCFS with 89\% accuracy. This has the least accuracy values when compared to other tests, the main reason behind this could be that the number of children who have taken VINE test is less when compared to other two tests and the features of this VINE test is less when compared to the rest two tests. 
+\item ADI review features predict subgroup data with 96.47\%, diagnose ASD with 96\%, diagnose ADHD with 98\% and diagnose VCFS with 94\% accuracy. ADI review test is better in predicting the diagnosis labels of subgroup data when compared to both the other tests. 
+\item The comorbid disorders ASD and ADHD could be identified with ADI parent oriented reviews and there exist some important features on which the models achieved an average accuracy of  94\%.
+\item Models could identify ASD and VCFS individually, but identifying their co-occurrence was more complex. The models built for ASD and VCFS comorbidity had an average accuracy of 90\%.
+\item When comparing the individual diagnosis of children, it could be seen that predicting VCFS (98\%) among children with given features is better when compared to ASD and ADHD. Also, when clustering the children into different groups, the children diagnosed with VCFS were clustered appropriately (100\%) when compared to the ASD cluster. 
+\end{itemize}
+
+Our analysis shows machine learning is good at identifying these developmental disorders and they can help clinicians in diagnosing children with these orders. The models that have been found can also bee used to better emphasis on features more closely related to this developmental disorders. As our models identify comorbidity as well, these models would better assist clinicians when diagnosing children with multiple disorders.
+
+The results and observations made in this research are a step towards using machine learning models to diagnose developmental disorders. Further analysis in this field will help us avoid confusions between different parent-oriented reviews and help us in justifying the importance of certain features over others during diagnosis. In the future, more studies could work on developing diagnostic specific models that will assess the disorder in children and their co-occurrences as well in an efficient and swift manner.

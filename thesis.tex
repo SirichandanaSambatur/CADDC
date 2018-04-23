@@ -1,0 +1,76 @@
+% build instructions:
+% $> pdflatex thesis
+% $> biber thesis
+% $> pdflatex thesis
+% $> pdflatex thesis
+%
+%
+% J. Garofoli //  April 2014
+\documentclass[hidelinks,letterpaper,12pt,oneside]{book}
+% change to twoside for paper printing version
+
+\linespread{2}
+\input{preambulo}
+
+%\input{/Users/justing/jgarofol/analysis/B2Dkpipi/Restrip/ana/mylatexvars2}
+%\input{mylatexvars2}
+
+\begin{document}
+\setlength{\unitlength}{1mm}
+\frontmatter
+\pagestyle{plainbottom}
+
+\input{abstract}
+\input{titlepage}
+%\input{committee}
+\pagestyle{plainbottom}
+\include{acknowledgment}
+
+\pagestyle{plainbottom}
+\addtocontents{toc}{\protect{\pdfbookmark[0]{\contentsname}{toc}}}
+\tableofcontents
+\clearpage
+\listoffigures
+\clearpage
+\listoftables
+\cleardoublepage
+\include{abb}
+
+\pagestyle{empty}
+\cleardoublepage
+\mainmatter
+\renewcommand{\chaptermark}[1]{\markboth{\MakeUppercase{#1}}{}}
+\pagestyle{plain}
+\include{intro}
+\include{RelatedWork}
+\include{Chapter3}
+\include{Chapter4}
+\include{Chapter5}
+\include{Chapter6}
+\include{conclusion}
+
+
+\bookmarksetup{startatroot}% this is it
+\addtocontents{toc}{\bigskip}% perhaps as well
+
+
+\bookmarksetup{startatroot}% this is it
+\addtocontents{toc}{\bigskip}% perhaps as well
+
+\backmatter
+% put back links to the referencing page? http://tex.stackexchange.com/questions/36307/formatting-back-references-in-bibliography 
+%\bibliography{thesis}{}
+%\bibliographystyle{plain-annote}
+%\bibliographystyle{jgsty}
+
+\pagestyle{plain}
+\printbibliography[heading=bibintoc]
+\cleardoublepage
+
+% an index? http://en.wikibooks.org/wiki/LaTeX/Indexing
+
+\pagestyle{empty}
+\cleardoublepage
+\include{cv}
+\end{document}
+
